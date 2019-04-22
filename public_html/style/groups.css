@@ -1,0 +1,45 @@
+.group-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2%;
+    justify-content: space-around;
+}
+
+.group-instance {
+    width: 100%;
+    background: green;
+    margin: 3%;
+    background: linear-gradient(to bottom, #ff9629 0%, #ef7215 100%);
+    border-radius: 10px;
+    box-shadow: -1px -1px 4px 4px #222;
+    font-family: sans-serif;
+    padding-left: 2%;
+}
+
+@media (min-width: 720px) {
+    .group-instance {
+        width: 40%;
+    }
+}
+
+.group-name {
+    text-align: center;
+    color: white;
+    margin-top: 0;
+}
+
+.event-button {
+    background: #FC6600;
+    color: white;
+    border: none;
+    outline: none;
+    margin-bottom: 1%;
+    box-shadow: 1px 1px #222;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.event-button:hover {
+    transform: translate(1px, 1px);
+    box-shadow: none;
+}

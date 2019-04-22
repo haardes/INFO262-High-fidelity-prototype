@@ -1,0 +1,18 @@
+.next-alarm {
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    width: 30%;
+    height: 20%;
+    background: linear-gradient(to bottom, #ff9629 0%, #ef7215 100%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: -1px -1px 4px 4px #222;
+    font-family: sans-serif;
+}
+
+.alarm-title {
+    margin-top: 0;
+}

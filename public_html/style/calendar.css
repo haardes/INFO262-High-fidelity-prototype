@@ -1,0 +1,26 @@
+.event-preview {
+    width: 100%;
+    max-height: 150px;
+    overflow-y: auto;
+    margin: auto;
+    background: #FC6600;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    margin-top: 2%;
+    border-radius: 5px;
+    box-shadow: -1px -1px 4px 4px #222;
+    font-family: sans-serif;
+}
+
+@media (min-width: 720px) {
+    .event-preview {
+        width: 40%;
+    }
+}
+
+@media (min-height: 800px) {
+    .event-preview {
+        max-height: 250px;
+    }
+}

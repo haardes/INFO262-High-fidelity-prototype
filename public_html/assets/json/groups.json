@@ -1,0 +1,55 @@
+{
+    "groups": [{
+            "name": "INFO262 Semesteroppgave",
+            "members": [{
+                    "name": "Fredriko",
+                    "id": 19028
+                },
+                {
+                    "name": "Tormodino",
+                    "id": 19027
+                },
+                {
+                    "name": "Eivind",
+                    "id": 19026
+                },
+                {
+                    "name": "Haslum",
+                    "id": 19025
+                }
+            ]
+        },
+        {
+            "name": "INFO134 Semesteroppgave",
+            "members": [{
+                    "name": "Fredriko",
+                    "id": 19028
+                },
+                {
+                    "name": "Bjørnar",
+                    "id": 19025
+                },
+                {
+                    "name": "Tore",
+                    "id": 19024
+                }
+            ]
+        },
+        {
+            "name": "Treningsgutta",
+            "members": [{
+                    "name": "Tormodino",
+                    "id": 19027
+                },
+                {
+                    "name": "Eivind",
+                    "id": 19026
+                },
+                {
+                    "name": "Fredriko",
+                    "id": 19028
+                }
+            ]
+        }
+    ]
+}

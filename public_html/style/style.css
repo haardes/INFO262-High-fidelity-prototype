@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.menu-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.page-selector {
+    flex: 1;
+    padding: 1%;
+    border: none;
+    border-radius: 5px 5px 0 0;
+    outline: none;
+    background: #333;
+}
+
+.page-selector:last-child {
+    border-right: none;
+}
+
+.page-selector.active {
+    filter: sepia(100%) hue-rotate(190deg) saturate(500%);
+}

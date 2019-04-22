@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/calendar.css">
+    <link rel="stylesheet" href="style/background.css">
+    <link href="../libs/hello-week-master/dist/css/hello.week.min.css" rel="stylesheet">
+    <title>Calendar</title>
+</head>
+
+<body>
+    <div class="background-container">
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+    </div>
+
+    <div class="hello-week">
+        <div class="hello-week__week"></div>
+        <div class="hello-week__month"></div>
+    </div>
+
+    <div class="event-preview">
+    </div>
+
+    <div class="menu-bar">
+        <button class="page-selector" id="alarm">
+            <img src="assets/alarm-clock-16.png" alt="Alarm-icon"
+                srcset="assets/alarm-clock-24.png 480w, assets/alarm-clock-32.png 900w, assets/alarm-clock-64.png 1280w">
+        </button>
+        <button class="page-selector active" id="calendar">
+            <img src="assets/calendar-16.png" alt="Calendar-icon"
+                srcset="assets/calendar-24.png 480w, assets/calendar-32.png 900w, assets/calendar-64.png 1280w">
+        </button>
+        <button class="page-selector" id="groups">
+            <img src="assets/group-16.png" alt="Group-icon"
+                srcset="assets/group-24.png 480w, assets/group-32.png 900w, assets/group-64.png 1280w">
+        </button>
+        <button class="page-selector" id="settings">
+            <img src="assets/gear-16.png" alt="Settings-icon"
+                srcset="assets/gear-24.png 480w, assets/gear-32.png 900w, assets/gear-64.png 1280w">
+        </button>
+    </div>
+
+    <script src="../libs/hello-week-master/dist/hello.week.min.js"></script>
+    <script src="javascript/script.js"></script>
+    <script src="javascript/calendar.js"></script>
+</body>
+
+</html>

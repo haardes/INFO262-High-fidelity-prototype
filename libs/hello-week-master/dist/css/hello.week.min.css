@@ -1,0 +1,82 @@
+.hello-week {
+  width: 100%;
+  margin: 0 auto;
+  user-select: none;
+  font-size: 1em;
+  margin-top: 5%;
+  background: linear-gradient(to bottom, #ff9629 0%, #ef7215 100%);
+  box-shadow: -1px -1px 4px 4px #222;
+  border-radius: 5px 5px 0 0;
+  font-family: sans-serif;
+}
+
+@media (min-width: 720px) {
+  .hello-week {
+    width: 70%;
+  }
+}
+
+.hello-week .navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+}
+
+.hello-week .prev,
+.hello-week .next {
+  padding: 1em;
+  cursor: pointer;
+}
+
+.hello-week .period {
+  width: 100%;
+  font-size: 1.6em;
+  font-weight: 400;
+  text-align: center;
+}
+
+.hello-week .week {
+  display: flex;
+}
+
+.hello-week .week.rtl {
+  flex-direction: row-reverse;
+}
+
+.hello-week .month {
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.hello-week .month.rtl {
+  flex-direction: row-reverse;
+}
+
+.hello-week .day {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14.28571%;
+  padding: 1em;
+  transition: background-color 0.2s cubic-bezier(0.25, 0.1, 0.49, 0.9);
+}
+
+.hello-week .is-today {
+  background: #883000;
+}
+
+.hello-week .is-weekend {
+  background: #F79862;
+}
+
+.hello-week .is-selected {
+  background: #FC6600;
+}
+
+.hello-week .is-disabled {
+  background: #B3672B;
+  filter: brightness(0.5);
+}

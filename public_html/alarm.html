@@ -17,9 +17,21 @@
         <div class="twinkling"></div>
     </div>
 
-    <div class="next-alarm">
-        <h1 class="alarm-title">Next alarm</h1>
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h1 class="alarm-title">Next alarm</h1>
+                <h1 class="alarm-time">12:15</h1>
+            </div>
+            <div class="flip-card-back">
+                <p>INFO262 Forelesning</p>
+                <p>SV Sal 1</p>
+                <p>I morgen kl 12:15</p>
+            </div>
+        </div>
     </div>
+
+    <button class="new-alarm" onclick="this.classList.add('active')">+</button>
 
     <div class="menu-bar">
         <button class="page-selector active" id="alarm">

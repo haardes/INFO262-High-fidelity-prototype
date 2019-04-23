@@ -28,5 +28,5 @@ body {
 }
 
 .page-selector.active {
-    filter: sepia(100%) hue-rotate(190deg) saturate(500%);
+    background: #0000a0;
 }

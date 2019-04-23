@@ -18,6 +18,7 @@ function showGroups() {
         let groupDiv = c("div");
         let groupName = c("h1");
         let eventButton = c("button");
+        let memberButton = c("button");
 
         groupName.innerText = group.name;
         groupName.classList.add("group-name");
@@ -36,6 +37,13 @@ function showGroups() {
         eventButton.innerText = "Show events";
         eventButton.classList.add("event-button");
         groupDiv.appendChild(eventButton);
+
+        memberButton.innerText = "Add member";
+        memberButton.classList.add("member-button");
+        memberButton.onclick = function () {
+            prompt("Phone number or ID of friend");
+        }
+        groupDiv.appendChild(memberButton);
 
         container.appendChild(groupDiv);
     });

@@ -9,7 +9,7 @@
     width: 100%;
     background: green;
     margin: 3%;
-    background: linear-gradient(to bottom, #ff9629 0%, #ef7215 100%);
+    background: linear-gradient(to bottom, #ffa249 0%, #ef7215 100%);
     border-radius: 10px;
     box-shadow: -1px -1px 4px 4px #222;
     font-family: sans-serif;
@@ -24,22 +24,25 @@
 
 .group-name {
     text-align: center;
-    color: white;
+    color: #000000;
     margin-top: 0;
 }
 
-.event-button {
-    background: #FC6600;
-    color: white;
+.event-button,
+.member-button {
+    background: #0c1dd3;
+    color: #ffffff;
     border: none;
     outline: none;
     margin-bottom: 1%;
+    margin-right: 1%;
     box-shadow: 1px 1px #222;
     border-radius: 5px;
     transition: 0.2s;
 }
 
-.event-button:hover {
+.event-button:hover,
+.member-button:hover {
     transform: translate(1px, 1px);
     box-shadow: none;
 }

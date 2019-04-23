@@ -1,18 +1,120 @@
 .next-alarm {
-    position: absolute;
-    left: 10%;
-    top: 10%;
-    width: 30%;
+    width: 90%;
     height: 20%;
-    background: linear-gradient(to bottom, #ff9629 0%, #ef7215 100%);
-    color: white;
-    display: flex;
+    margin: auto;
+    margin-top: 10%;
+    background: linear-gradient(to bottom, #ffa249 0%, #ef7215 100%);
+    color: #000000;
     justify-content: center;
     border-radius: 10px;
     box-shadow: -1px -1px 4px 4px #222;
     font-family: sans-serif;
+    text-align: center;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 90%;
+    height: 150px;
+    margin: 5%;
+    border-radius: 5px;
+    box-shadow: -1px -1px 4px 4px #222;
+    font-family: sans-serif;
+    text-align: center;
+    perspective: 1000px;
+}
+
+@media (min-width: 720px) {
+    .flip-card {
+        position: absolute;
+        left: 10%;
+        top: 10%;
+        background-color: transparent;
+        width: 300px;
+        height: 150px;
+    }
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 5px;
+}
+
+.flip-card-front {
+    background: linear-gradient(to bottom, #ffa249 0%, #ef7215 100%);
+    color: black;
+    z-index: 2;
+}
+
+.flip-card-back {
+    background-color: #0000a0;
+    color: white;
+    font-size: 1.3em;
+    transform: rotateY(180deg);
+    z-index: 1;
 }
 
 .alarm-title {
     margin-top: 0;
+}
+
+.alarm-time {
+    margin-top: 0;
+    font-size: 5em;
+}
+
+.new-alarm {
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    border: none;
+    outline: none;
+    font-size: 3em;
+    padding: 0;
+    background: #ef7215;
+    border: solid 1px #ffa249;
+    transition: 0.5s;
+    margin-left: 40%;
+}
+
+.new-alarm.active {
+    width: 90%;
+    height: 150px;
+    margin: 5%;
+    border-radius: 0;
+}
+
+@media (min-width: 720px) {
+    .new-alarm {
+        position: absolute;
+        left: 40%;
+        top: 10%;
+        width: 100px;
+        height: 100px;
+        font-size: 5em;
+        margin: 5%;
+    }
+
+    .new-alarm.active {
+        width: 300px;
+    }
 }

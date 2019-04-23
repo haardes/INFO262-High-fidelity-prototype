@@ -4,7 +4,7 @@
   user-select: none;
   font-size: 1em;
   margin-top: 5%;
-  background: linear-gradient(to bottom, #ff9629 0%, #ef7215 100%);
+  background: linear-gradient(to bottom, #ffa249 0%, #ef7215 100%);
   box-shadow: -1px -1px 4px 4px #222;
   border-radius: 5px 5px 0 0;
   font-family: sans-serif;
@@ -65,18 +65,18 @@
 }
 
 .hello-week .is-today {
-  background: #883000;
-}
 
-.hello-week .is-weekend {
-  background: #F79862;
-}
-
-.hello-week .is-selected {
   background: #FC6600;
 }
 
+.hello-week .is-weekend {
+  background: #ffa249;
+}
+
+.hello-week .is-selected {
+  border: solid 1px #883000;
+}
+
 .hello-week .is-disabled {
-  background: #B3672B;
-  filter: brightness(0.5);
+  background: #b64300;
 }

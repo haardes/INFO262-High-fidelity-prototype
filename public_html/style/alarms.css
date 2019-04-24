@@ -76,6 +76,7 @@
     background: #534bae;
     position: fixed;
     color: white;
+    font-family: sans-serif;
     right: 0;
     bottom: 100px;
     width: 75px;
@@ -102,7 +103,6 @@
     height: 250px;
     border-radius: 0;
 }
-
 
 @media (min-width: 720px) {
     .new-alarm.active {

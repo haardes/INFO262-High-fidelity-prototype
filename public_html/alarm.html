@@ -6,53 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/background.css">
     <link rel="stylesheet" href="style/alarms.css">
     <title>Alarms</title>
 </head>
 
 <body>
-    <div class="background-container">
-        <div class="stars"></div>
-        <div class="twinkling"></div>
-    </div>
-
-    <div class="flip-card">
-        <div class="flip-card-inner">
-            <div class="flip-card-front">
-                <h1 class="alarm-title">Next alarm</h1>
-                <h1 class="alarm-time">12:15</h1>
+    <div class="alarm-container">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h1 class="alarm-title">Next alarm</h1>
+                    <h1 class="alarm-time">12:15</h1>
+                </div>
+                <div class="flip-card-back">
+                    <p>INFO262 Forelesning</p>
+                    <p>SV Sal 1</p>
+                    <p>23.04.2019 12:15</p>
+                </div>
             </div>
-            <div class="flip-card-back">
-                <p>INFO262 Forelesning</p>
-                <p>SV Sal 1</p>
-                <p>I morgen kl 12:15</p>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h1 class="alarm-title">Forelesning</h1>
+                    <h1 class="alarm-time">14:15</h1>
+                </div>
+                <div class="flip-card-back">
+                    <p>INFO262 Forelesning</p>
+                    <p>SV Sal 1</p>
+                    <p>23.04.2019 12:15</p>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h1 class="alarm-title">Lab</h1>
+                    <h1 class="alarm-time">10:15</h1>
+                </div>
+                <div class="flip-card-back">
+                    <p>INFO262 Forelesning</p>
+                    <p>SV Sal 1</p>
+                    <p>23.04.2019 12:15</p>
+                </div>
             </div>
         </div>
     </div>
 
-    <button class="new-alarm" onclick="this.classList.add('active')">+</button>
+    <div class="new-alarm">
+        <p>+</p>
+        <input class="hidden" type="text" name="text" id="titleinput">
+        <input class="hidden" type="time" name="timepicker" id="timepicker">
+        <input class="hidden" type="text" name="desc" id="descinput">
+        <button class="hidden" class="create-alarm">Create</button>
+    </div>
 
     <div class="menu-bar">
-        <button class="page-selector active" id="alarm">
-            <img src="assets/alarm-clock-16.png" alt="Alarm-icon"
-                srcset="assets/alarm-clock-24.png 480w, assets/alarm-clock-32.png 900w, assets/alarm-clock-64.png 1280w">
-        </button>
-        <button class="page-selector" id="calendar">
-            <img src="assets/calendar-16.png" alt="Calendar-icon"
-                srcset="assets/calendar-24.png 480w, assets/calendar-32.png 900w, assets/calendar-64.png 1280w">
-        </button>
-        <button class="page-selector" id="groups">
-            <img src="assets/group-16.png" alt="Group-icon"
-                srcset="assets/group-24.png 480w, assets/group-32.png 900w, assets/group-64.png 1280w">
-        </button>
-        <button class="page-selector" id="settings">
-            <img src="assets/gear-16.png" alt="Settings-icon"
-                srcset="assets/gear-24.png 480w, assets/gear-32.png 900w, assets/gear-64.png 1280w">
-        </button>
+        <div class="page-selector active" id="alarm">
+            <img src="assets/alarm-clock.svg" alt="Alarm-icon">
+            <p>Alarm</p>
+        </div>
+        <div class="page-selector" id="calendar">
+            <img src="assets/calendar-interface-symbol-tool.svg" alt="Alarm-icon">
+            <p>Calendar</p>
+        </div>
+        <div class="page-selector" id="groups">
+            <img src="assets/males-group.svg" alt="Alarm-icon">
+            <p>Groups</p>
+        </div>
+        <div class="page-selector" id="settings">
+            <img src="assets/gear.svg" alt="Alarm-icon">
+            <p>Settings</p>
+        </div>
     </div>
 
     <script src="javascript/script.js"></script>
+    <script src="javascript/alarms.js"></script>
 </body>
 
 </html>

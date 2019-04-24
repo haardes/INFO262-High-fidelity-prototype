@@ -1,14 +1,4 @@
 let events, selectedEvents = [];
-getData("assets/json/events.json", handleEvents);
-
-function handleEvents(res, err) {
-    if (err) {
-        console.log(err);
-    } else {
-        events = res.events;
-    }
-}
-
 const myCalendar = new HelloWeek({
     selector: ".hello-week",
     lang: "en",
@@ -35,6 +25,7 @@ const myCalendar = new HelloWeek({
     onNavigation: function () {},
     onSelect: function () {
         const selected = myCalendar.daysSelected[0];
+        console.log(this);
         const eventPreview = q(".event-preview");
 
         selectedEvents.forEach(event => {
@@ -78,11 +69,29 @@ const myCalendar = new HelloWeek({
     },
     onClear: function () {}
 });
+
+function handleEvents(res, err) {
+    if (err) {
+        console.log(err);
+    } else {
+        events = res.events;
+        createNotifications();
+    }
+}
+
+function createNotifications() {
+    console.log(myCalendar.days);
+    myCalendar.days.forEach(day => {
+        if (!day.locked) {
+            console.log(day);
+        }
+    });
+}
+
 const prev = document.querySelector('.demo-prev');
 const next = document.querySelector('.demo-next');
 
-
-{
+getData("assets/json/events.json", handleEvents); {
     /* < div class = "event" >
         <
         h1 class = "event-title" > < /h1> <

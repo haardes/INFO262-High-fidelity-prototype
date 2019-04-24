@@ -4,6 +4,7 @@
 
 body {
     margin: 0;
+    background: #263238;
 }
 
 .menu-bar {
@@ -11,7 +12,6 @@ body {
     bottom: 0;
     width: 100%;
     display: flex;
-    justify-content: space-around;
 }
 
 .page-selector {
@@ -20,7 +20,22 @@ body {
     border: none;
     border-radius: 5px 5px 0 0;
     outline: none;
-    background: #333;
+    background: #000;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.page-selector>img {
+    width: 40px;
+    height: 40px;
+    flex: 1 0 100%;
+    margin: 0;
+}
+
+.page-selector>p {
+    margin: 0;
 }
 
 .page-selector:last-child {
@@ -28,5 +43,5 @@ body {
 }
 
 .page-selector.active {
-    background: #0000a0;
+    background: #534bae;
 }

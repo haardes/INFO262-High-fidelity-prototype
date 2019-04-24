@@ -15,7 +15,7 @@ q(".new-alarm>button").onclick = () => {
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <h1 class="alarm-title">${i("titleinput").value}</h1>
-                    <h1 class="alarm-time">${i("timepicker").value}</h1>
+                    <h1 class="alarm-time">${i("demo-app-time").value}</h1>
                 </div>
                 <div class="flip-card-back">
                     <p>${i("descinput").value}</p>
@@ -31,5 +31,13 @@ q(".new-alarm>button").onclick = () => {
     }
     i("titleinput").value = "";
     i("descinput").value = "";
-    i("timepicker").value = null;
+    i("demo-app-time").value = null;
 }
+
+mobiscroll.settings = {
+    lang: 'no',
+    theme: 'ios',
+    display: 'bubble'
+};
+mobiscroll.date('#demo-app-date');
+mobiscroll.time('#demo-app-time');

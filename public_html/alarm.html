@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/alarms.css">
+    <link rel="stylesheet" href="../libs/mobiscroll/css/mobiscroll.javascript.min.css">
     <title>Alarms</title>
 </head>
 
@@ -55,8 +56,21 @@
 
     <div class="new-alarm">
         <p>+</p>
+        <p class="hidden">Title:</p>
         <input class="hidden" type="text" name="text" id="titleinput">
-        <input class="hidden" type="time" name="timepicker" id="timepicker">
+        <div class="mbsc-col-sm-12 mbsc-col-md-6 hidden">
+            <label>
+                Date:
+                <input id="demo-app-date" placeholder="Please Select..." />
+            </label>
+        </div>
+        <div class="mbsc-col-sm-12 mbsc-col-md-6 hidden">
+            <label>
+                Time:
+                <input id="demo-app-time" placeholder="Please Select..." />
+            </label>
+        </div>
+        <p class="hidden">Description:</p>
         <input class="hidden" type="text" name="desc" id="descinput">
         <button class="hidden" class="create-alarm">Create</button>
     </div>
@@ -80,6 +94,7 @@
         </div>
     </div>
 
+    <script src="../libs/mobiscroll/js/mobiscroll.javascript.min.js"></script>
     <script src="javascript/script.js"></script>
     <script src="javascript/alarms.js"></script>
 </body>

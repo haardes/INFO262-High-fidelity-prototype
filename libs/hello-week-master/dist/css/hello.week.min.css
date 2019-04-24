@@ -56,6 +56,7 @@
 }
 
 .hello-week .day {
+  background: #c5cae9;
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -63,6 +64,13 @@
   width: 14.28571%;
   padding: 1em;
   transition: background-color 0.2s cubic-bezier(0.25, 0.1, 0.49, 0.9);
+  transition: transform .2s ease-in-out
+}
+
+.hello-week .day:hover:not(.is-disabled) {
+  z-index: 5;
+  transform: scale(1.2);
+  filter: brightness(0.8);
 }
 
 .hello-week .is-today {

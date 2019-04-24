@@ -25,7 +25,6 @@ const myCalendar = new HelloWeek({
     onNavigation: function () {},
     onSelect: function () {
         const selected = myCalendar.daysSelected[0];
-        console.log(this);
         const eventPreview = q(".event-preview");
 
         selectedEvents.forEach(event => {
@@ -54,7 +53,6 @@ const myCalendar = new HelloWeek({
         });
 
         if (selectedEvents.length == 0) {
-            console.log("No events today");
             let eventDiv = c("div");
             let eventDesc = c("p");
 
@@ -80,10 +78,23 @@ function handleEvents(res, err) {
 }
 
 function createNotifications() {
-    console.log(myCalendar.days);
-    myCalendar.days.forEach(day => {
-        if (!day.locked) {
-            console.log(day);
+    let year = myCalendar.date.getFullYear();
+    let month = myCalendar.date.getMonth();
+
+    Object.keys(myCalendar.days).forEach(key => {
+        let day = myCalendar.days[key];
+        let hasEvent = false;
+        if (!day.locked && !hasEvent) {
+            events.forEach(event => {
+                let eventDate = new Date(`${event.startDate}T${event.startTime}:00`);
+                if (eventDate.getFullYear() == year && eventDate.getMonth() == month && eventDate.getDate() == day.day && !hasEvent) {
+                    let notification = c("div");
+                    notification.classList.add("event-notification");
+
+                    day.element.appendChild(notification);
+                    hasEvent = true;
+                }
+            });
         }
     });
 }
@@ -91,7 +102,11 @@ function createNotifications() {
 const prev = document.querySelector('.demo-prev');
 const next = document.querySelector('.demo-next');
 
-getData("assets/json/events.json", handleEvents); {
+setTimeout(() => {
+    getData("assets/json/events.json", handleEvents);
+}, 100);
+
+{
     /* < div class = "event" >
         <
         h1 class = "event-title" > < /h1> <

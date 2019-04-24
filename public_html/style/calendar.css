@@ -1,3 +1,14 @@
+.event-notification {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1%;
+    min-width: 10px;
+    min-height: 10px;
+    background: #000051;
+    border-radius: 100%;
+}
+
 .event-preview {
     width: 100%;
     max-height: 140px;
